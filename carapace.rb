@@ -11,7 +11,7 @@ class Carapace < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/rsteube/carapace-bin/releases/download/v0.8.6/carapace-bin_0.8.6_Darwin_arm64.tar.gz"
-      sha256 "b73bdc2e26dee3004a06b545a0920c02e0a149564b1466705028b68c87a31381"
+      sha256 "4a77c4eb3f36edfe7191133a1a3d6aa8017f27d7409de04ea44025354f1c1b0a"
 
       def install
         bin.install "carapace"
@@ -19,7 +19,7 @@ class Carapace < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/rsteube/carapace-bin/releases/download/v0.8.6/carapace-bin_0.8.6_Darwin_x86_64.tar.gz"
-      sha256 "95f95265cb9f115e4d33cbc12aaab11fb9e11142792cab37f3b009beb4af809d"
+      sha256 "d6d90759c4f793080ba18928f3f1fc6c3b25c3ea3918d69eb06e26e8ac0cf5f8"
 
       def install
         bin.install "carapace"
@@ -30,7 +30,7 @@ class Carapace < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/rsteube/carapace-bin/releases/download/v0.8.6/carapace-bin_0.8.6_Linux_arm64.tar.gz"
-      sha256 "b746cba3c286a4f16c99fc30d9869494048ab5c0ba007e683dc3c97876528eec"
+      sha256 "07871e2813a2c0a589bd32d1a2decda141295f70db52eb328c23fc37698e5943"
 
       def install
         bin.install "carapace"
@@ -38,7 +38,7 @@ class Carapace < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/rsteube/carapace-bin/releases/download/v0.8.6/carapace-bin_0.8.6_Linux_x86_64.tar.gz"
-      sha256 "041f0b21ed20856795dbb7c3d9c41375f64b8b82d04c5ac4589c1017cfc0a744"
+      sha256 "edf5526134086f7ac0f4c8efdc6ccacf84437ce3996a80948c0851ec00a41d56"
 
       def install
         bin.install "carapace"
