@@ -5,21 +5,21 @@
 class Carapace < Formula
   desc "multi-shell multi-command argument completer"
   homepage "https://github.com/rsteube/carapace-bin"
-  version "0.8.8"
+  version "0.8.9"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rsteube/carapace-bin/releases/download/v0.8.8/carapace-bin_0.8.8_Darwin_x86_64.tar.gz"
-      sha256 "686c336cdaeb0dadd655f009eab7727449861e81916edac62d7845b27001296b"
+      url "https://github.com/rsteube/carapace-bin/releases/download/v0.8.9/carapace-bin_0.8.9_Darwin_x86_64.tar.gz"
+      sha256 "ba612c85d8b1d65ca34bdeb9a4c88c91bde1db8d305ebd9260e44add40e125b0"
 
       def install
         bin.install "carapace"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rsteube/carapace-bin/releases/download/v0.8.8/carapace-bin_0.8.8_Darwin_arm64.tar.gz"
-      sha256 "619572c3c2c492c7cae0f249da48cec218c582f26c6af049ea5839a0d3c05fbe"
+      url "https://github.com/rsteube/carapace-bin/releases/download/v0.8.9/carapace-bin_0.8.9_Darwin_arm64.tar.gz"
+      sha256 "9c8a8e9b91677a0b6384febefb7732956210828bca117f29acef535f8021260c"
 
       def install
         bin.install "carapace"
@@ -29,16 +29,16 @@ class Carapace < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/rsteube/carapace-bin/releases/download/v0.8.8/carapace-bin_0.8.8_Linux_x86_64.tar.gz"
-      sha256 "af75fc495335bff6ddc0f0a19fb8b5917b6954130c83aa40a7289d9398bd5c65"
+      url "https://github.com/rsteube/carapace-bin/releases/download/v0.8.9/carapace-bin_0.8.9_Linux_x86_64.tar.gz"
+      sha256 "50d7b130abb8ce43ed1970336ad6259c62361f2f421e8fed401c76b51874fda0"
 
       def install
         bin.install "carapace"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rsteube/carapace-bin/releases/download/v0.8.8/carapace-bin_0.8.8_Linux_arm64.tar.gz"
-      sha256 "08664d6f9688cc5b64bfac3f006dd844121012528887b75ffb513eb4204f6022"
+      url "https://github.com/rsteube/carapace-bin/releases/download/v0.8.9/carapace-bin_0.8.9_Linux_arm64.tar.gz"
+      sha256 "b87c53395fbdd3eca37459500a65be55036a46ca224195e67258021fd427b58d"
 
       def install
         bin.install "carapace"
