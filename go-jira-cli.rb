@@ -5,21 +5,21 @@
 class GoJiraCli < Formula
   desc "simple jira command line client"
   homepage "https://github.com/rsteube/go-jira-cli"
-  version "0.1.11"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.1.11/gj_0.1.11_Darwin_x86_64.tar.gz"
-      sha256 "9bb5c077b8fd5702096b5467390053e076828cee6641d5b3987dada748b2f0d3"
+    if Hardware::CPU.arm?
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.1/gj_0.2.1_Darwin_arm64.tar.gz"
+      sha256 "2858ee576b95c3c9442c850c524b57587a25c33900cbfd0106311dbf5cf59f0f"
 
       def install
         bin.install "gj"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.1.11/gj_0.1.11_Darwin_arm64.tar.gz"
-      sha256 "4d0466c622d757d4d24898c1646268b082e3cc028fb63e359e4a7d4bb1f77ce8"
+    if Hardware::CPU.intel?
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.1/gj_0.2.1_Darwin_x86_64.tar.gz"
+      sha256 "e040e9ec2c193e771c8650938e6b8c53c86050d94021070d0c1273c731926111"
 
       def install
         bin.install "gj"
@@ -29,16 +29,16 @@ class GoJiraCli < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.1.11/gj_0.1.11_Linux_x86_64.tar.gz"
-      sha256 "bfbf14170e7fa08a49f59d38281b9b21e9d5838e10c4e106d2da486c676bb1b1"
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.1/gj_0.2.1_Linux_x86_64.tar.gz"
+      sha256 "c803982dfaea4504c339d5cf77e07dd70391a120e6e4c347bc78465660f28307"
 
       def install
         bin.install "gj"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.1.11/gj_0.1.11_Linux_arm64.tar.gz"
-      sha256 "2a28c69dc97e68bdade75bd0daa765dc58458ac5576e2dba7ea611005c8358ed"
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.1/gj_0.2.1_Linux_arm64.tar.gz"
+      sha256 "0f575fa22dcb79acd031e1bf8c07af26ffc1d3d9d7c4697b47ae094f097108e5"
 
       def install
         bin.install "gj"
