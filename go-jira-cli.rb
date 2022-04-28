@@ -5,21 +5,21 @@
 class GoJiraCli < Formula
   desc "simple jira command line client"
   homepage "https://github.com/rsteube/go-jira-cli"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.1/gj_0.2.1_Darwin_arm64.tar.gz"
-      sha256 "2858ee576b95c3c9442c850c524b57587a25c33900cbfd0106311dbf5cf59f0f"
+    if Hardware::CPU.intel?
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.2/gj_0.2.2_Darwin_x86_64.tar.gz"
+      sha256 "e75b844539dcce551d26b6018246084476df4f1e0e7504b491b8a01edf0ce0b7"
 
       def install
         bin.install "gj"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.1/gj_0.2.1_Darwin_x86_64.tar.gz"
-      sha256 "e040e9ec2c193e771c8650938e6b8c53c86050d94021070d0c1273c731926111"
+    if Hardware::CPU.arm?
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.2/gj_0.2.2_Darwin_arm64.tar.gz"
+      sha256 "22c86daee46dd65326c233d79f831a93b260868d6893a43390ea6336a30f213e"
 
       def install
         bin.install "gj"
@@ -28,17 +28,17 @@ class GoJiraCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.1/gj_0.2.1_Linux_x86_64.tar.gz"
-      sha256 "c803982dfaea4504c339d5cf77e07dd70391a120e6e4c347bc78465660f28307"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.2/gj_0.2.2_Linux_arm64.tar.gz"
+      sha256 "e045c80fe446ecf0161a342fd83f5a633f1fd9032b7c467fa46043b4dea50e4a"
 
       def install
         bin.install "gj"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.1/gj_0.2.1_Linux_arm64.tar.gz"
-      sha256 "0f575fa22dcb79acd031e1bf8c07af26ffc1d3d9d7c4697b47ae094f097108e5"
+    if Hardware::CPU.intel?
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.2/gj_0.2.2_Linux_x86_64.tar.gz"
+      sha256 "f02fb4398fc37dccef5be67399be210e6476e1b0ea0b7f2bb72c3681b5c8aee0"
 
       def install
         bin.install "gj"
