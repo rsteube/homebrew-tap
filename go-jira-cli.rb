@@ -5,21 +5,21 @@
 class GoJiraCli < Formula
   desc "simple jira command line client"
   homepage "https://github.com/rsteube/go-jira-cli"
-  version "0.2.3"
+  version "0.2.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.3/gj_0.2.3_Darwin_arm64.tar.gz"
-      sha256 "1bc75b7cce921a640c4089830cf9199e9892245e4150f3c3fe57824d42ef9649"
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.4/gj_0.2.4_Darwin_arm64.tar.gz"
+      sha256 "043b8084d5cd03fe7fe8f0f47da9e661eaf0ecfc495a34a1b5484ff08d3be51e"
 
       def install
         bin.install "gj"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.3/gj_0.2.3_Darwin_x86_64.tar.gz"
-      sha256 "54eb5366507c60d3f9f670e5741a219fe377e087934ede0099ed57cc0bfb2a31"
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.4/gj_0.2.4_Darwin_x86_64.tar.gz"
+      sha256 "1a5f609ade8a955a14e7d6a64d1bff0339f0a792a34758b8064116e0c57ed7f6"
 
       def install
         bin.install "gj"
@@ -28,17 +28,17 @@ class GoJiraCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.3/gj_0.2.3_Linux_x86_64.tar.gz"
-      sha256 "409e16f3e8fcc222a761d02f5a3d0b3802e467306d3d639d2c94757055fa6e30"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.4/gj_0.2.4_Linux_arm64.tar.gz"
+      sha256 "a734f743513537e06511476161e39152fcf2aabee1d3579ba619817bfe9135d5"
 
       def install
         bin.install "gj"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.3/gj_0.2.3_Linux_arm64.tar.gz"
-      sha256 "6e29dc0f39cd3b815d80bc8e597b8db5d0ed12afc6d8e27a1c3cbecf61905f98"
+    if Hardware::CPU.intel?
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.4/gj_0.2.4_Linux_x86_64.tar.gz"
+      sha256 "5aa74197303323ed25e41c241acb3e238e5dbaf58ae23ceb625fac8d8b7f6240"
 
       def install
         bin.install "gj"
