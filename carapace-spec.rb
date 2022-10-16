@@ -5,21 +5,21 @@
 class CarapaceSpec < Formula
   desc "define simple completions using a spec file"
   homepage "https://github.com/rsteube/carapace-spec"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/rsteube/carapace-spec/releases/download/v0.1.1/carapace-spec_0.1.1_Darwin_x86_64.tar.gz"
-      sha256 "f3f814da0d439023be05663bc0a6cb9ffe540d337cc6a4872c9ab500d8293b52"
+    if Hardware::CPU.arm?
+      url "https://github.com/rsteube/carapace-spec/releases/download/v0.1.2/carapace-spec_0.1.2_Darwin_arm64.tar.gz"
+      sha256 "df69e256391f075c5b9ec36af8a35fec6b834c718838024bb9d826056bb36837"
 
       def install
         bin.install "carapace-spec"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/rsteube/carapace-spec/releases/download/v0.1.1/carapace-spec_0.1.1_Darwin_arm64.tar.gz"
-      sha256 "26cd722818d071b99ea831f0985ab41e9f60cb14d5e0701071ae33c63b36e033"
+    if Hardware::CPU.intel?
+      url "https://github.com/rsteube/carapace-spec/releases/download/v0.1.2/carapace-spec_0.1.2_Darwin_x86_64.tar.gz"
+      sha256 "c47c6337c01d8ef21942633aad3c455141afbeec6a301042c9930f0b99428cb8"
 
       def install
         bin.install "carapace-spec"
@@ -28,17 +28,17 @@ class CarapaceSpec < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rsteube/carapace-spec/releases/download/v0.1.1/carapace-spec_0.1.1_Linux_arm64.tar.gz"
-      sha256 "6378e816c5659834822d654eb5b65734a1c8f96e6837d6518ab9959bbb830e3e"
+    if Hardware::CPU.intel?
+      url "https://github.com/rsteube/carapace-spec/releases/download/v0.1.2/carapace-spec_0.1.2_Linux_x86_64.tar.gz"
+      sha256 "7da21839f5197150f57928dd5abfba103085a2c61da840969d6437c8567cb3b9"
 
       def install
         bin.install "carapace-spec"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rsteube/carapace-spec/releases/download/v0.1.1/carapace-spec_0.1.1_Linux_x86_64.tar.gz"
-      sha256 "46224fa18f7fb8d25a3546fda46909d7b34968deeea81d2399a9cd38c320b981"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rsteube/carapace-spec/releases/download/v0.1.2/carapace-spec_0.1.2_Linux_arm64.tar.gz"
+      sha256 "d0ecc501bdcc43480b869f3c070d33cb801d29c25f2365546fcd6bef5a5a44e4"
 
       def install
         bin.install "carapace-spec"
