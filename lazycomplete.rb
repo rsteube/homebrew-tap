@@ -5,21 +5,21 @@
 class Lazycomplete < Formula
   desc "lazy loading for shell completion scripts"
   homepage "https://github.com/rsteube/lazycomplete"
-  version "0.0.18"
+  version "0.0.19"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rsteube/lazycomplete/releases/download/v0.0.18/lazycomplete_0.0.18_Darwin_x86_64.tar.gz"
-      sha256 "eaca847af318e2091708e9966ec25a86ec3035f1da1cbf83fa817ad9b656e026"
+      url "https://github.com/rsteube/lazycomplete/releases/download/v0.0.19/lazycomplete_0.0.19_Darwin_x86_64.tar.gz"
+      sha256 "4e1d514f7ed162f06de15f39550d17ebba55765202c9072d36d0a74b01b8e01d"
 
       def install
         bin.install "lazycomplete"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rsteube/lazycomplete/releases/download/v0.0.18/lazycomplete_0.0.18_Darwin_arm64.tar.gz"
-      sha256 "97a424b101246923e0fe63494211e2f9fdeedd32c38833ef94257a4bc65bcf24"
+      url "https://github.com/rsteube/lazycomplete/releases/download/v0.0.19/lazycomplete_0.0.19_Darwin_arm64.tar.gz"
+      sha256 "77ab0f2ff2130cad2728097196a7ab9a84a179c307559f74ad748a47e2bd22d1"
 
       def install
         bin.install "lazycomplete"
@@ -28,17 +28,17 @@ class Lazycomplete < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/rsteube/lazycomplete/releases/download/v0.0.18/lazycomplete_0.0.18_Linux_x86_64.tar.gz"
-      sha256 "89785be6a72a2f313edfb662c2c67dcd14bc8af1520513879c5f8b8c1df0a56f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rsteube/lazycomplete/releases/download/v0.0.19/lazycomplete_0.0.19_Linux_arm64.tar.gz"
+      sha256 "100ef050f2be34d5835945b3664308ecf19b78aada8d4317ade88c1db301b7c5"
 
       def install
         bin.install "lazycomplete"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rsteube/lazycomplete/releases/download/v0.0.18/lazycomplete_0.0.18_Linux_arm64.tar.gz"
-      sha256 "142a4b8fc75ab5673e5be51a93457dc6985f47e330431a9707bad9240c47448b"
+    if Hardware::CPU.intel?
+      url "https://github.com/rsteube/lazycomplete/releases/download/v0.0.19/lazycomplete_0.0.19_Linux_x86_64.tar.gz"
+      sha256 "b6f341b629cfbe67a4c1146c8cb0aa8e33b7761d341d9bda6580dd78d8ed7391"
 
       def install
         bin.install "lazycomplete"
