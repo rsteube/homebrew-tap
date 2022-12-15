@@ -5,21 +5,21 @@
 class GoJiraCli < Formula
   desc "simple jira command line client"
   homepage "https://github.com/rsteube/go-jira-cli"
-  version "0.2.5"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.5/gj_0.2.5_Darwin_x86_64.tar.gz"
-      sha256 "53d687760259e8d02a55f4c40f34969e2ad88ff7932cbe5e1bbe7f91e3e0c6ab"
+    if Hardware::CPU.arm?
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.3.0/gj_0.3.0_Darwin_arm64.tar.gz"
+      sha256 "16646206c648ceb897c02c12372e63ac2ed5641cb81f6ff9856bf06318ec2f29"
 
       def install
         bin.install "gj"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.5/gj_0.2.5_Darwin_arm64.tar.gz"
-      sha256 "0fbfb009867fe81655c13b10d25b22be0026b8871b0f663fa020aee347df1b1b"
+    if Hardware::CPU.intel?
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.3.0/gj_0.3.0_Darwin_x86_64.tar.gz"
+      sha256 "40497fc3b3d8507deedd1327cc35b78678be1dd5bb864b6e9fe1dfb87bfff72a"
 
       def install
         bin.install "gj"
@@ -29,16 +29,16 @@ class GoJiraCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.5/gj_0.2.5_Linux_arm64.tar.gz"
-      sha256 "b1a1174dc52b61459c9b3152d028c7491dc69e673f97b41df1820bea6501b065"
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.3.0/gj_0.3.0_Linux_arm64.tar.gz"
+      sha256 "ab04ecab07bacdd069e69312e392984d87efa49f5ed8aa481c36b98923ff2171"
 
       def install
         bin.install "gj"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.2.5/gj_0.2.5_Linux_x86_64.tar.gz"
-      sha256 "8ad2c58922706fc760d0aef46f39686b5cbde37b59ceeb6c4fe7b65887cd060c"
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.3.0/gj_0.3.0_Linux_x86_64.tar.gz"
+      sha256 "2a96d2074d53889e6cd4d26abe6ae68412112978e8179f1d75c155c3f6ba4e02"
 
       def install
         bin.install "gj"
