@@ -5,21 +5,21 @@
 class GoJiraCli < Formula
   desc "simple jira command line client"
   homepage "https://github.com/rsteube/go-jira-cli"
-  version "0.3.0"
+  version "0.4.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.3.0/gj_0.3.0_Darwin_arm64.tar.gz"
-      sha256 "16646206c648ceb897c02c12372e63ac2ed5641cb81f6ff9856bf06318ec2f29"
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.4.1/gj_0.4.1_Darwin_arm64.tar.gz"
+      sha256 "dd57671b1ea6cf64572837e0794a5b405a9583b6cf3f1f151dae10fa44fc0546"
 
       def install
         bin.install "gj"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.3.0/gj_0.3.0_Darwin_x86_64.tar.gz"
-      sha256 "40497fc3b3d8507deedd1327cc35b78678be1dd5bb864b6e9fe1dfb87bfff72a"
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.4.1/gj_0.4.1_Darwin_x86_64.tar.gz"
+      sha256 "fbcf8b342b85de01c514771f77a5d960688e15b84ec97af4ffe6c23e024350ff"
 
       def install
         bin.install "gj"
@@ -29,16 +29,16 @@ class GoJiraCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.3.0/gj_0.3.0_Linux_arm64.tar.gz"
-      sha256 "ab04ecab07bacdd069e69312e392984d87efa49f5ed8aa481c36b98923ff2171"
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.4.1/gj_0.4.1_Linux_arm64.tar.gz"
+      sha256 "589fdedb67028acd12850cdd2888eefae48e321815c4ce47320c74bdc60ffe5c"
 
       def install
         bin.install "gj"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.3.0/gj_0.3.0_Linux_x86_64.tar.gz"
-      sha256 "2a96d2074d53889e6cd4d26abe6ae68412112978e8179f1d75c155c3f6ba4e02"
+      url "https://github.com/rsteube/go-jira-cli/releases/download/v0.4.1/gj_0.4.1_Linux_x86_64.tar.gz"
+      sha256 "1d61db1991924814c1dcddc2ebaa2b99695a2241105de907379d8e995cfac2a1"
 
       def install
         bin.install "gj"
