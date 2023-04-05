@@ -11,7 +11,7 @@ class CarapaceBridge < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/rsteube/carapace-bridge/releases/download/v0.0.18/carapace-bridge_darwin_amd64.tar.gz"
-      sha256 "180826263ebe7e11ae19fb6c8895f464372f29631cb5d02d810a9d9f5d39c477"
+      sha256 "3315b98d2babcfaa9f64a6bf9c402558dd34ed36b8e4de4ec6852de6968c0377"
 
       def install
         bin.install "carapace-bridge"
@@ -19,7 +19,7 @@ class CarapaceBridge < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/rsteube/carapace-bridge/releases/download/v0.0.18/carapace-bridge_darwin_arm64.tar.gz"
-      sha256 "27dc5a7b52638622e482b149a4d36e6a75d2d79194d3c8c802a59f5dbc8ca75f"
+      sha256 "f27b095dcab1f14024e525c553f48a9d0f606a9b8210112fcec761b648df397a"
 
       def install
         bin.install "carapace-bridge"
@@ -30,7 +30,7 @@ class CarapaceBridge < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/rsteube/carapace-bridge/releases/download/v0.0.18/carapace-bridge_linux_arm64.tar.gz"
-      sha256 "bc06a98499190c8dc044af393c4c508d327558b1607ecae5e6e60724ffa9a3a4"
+      sha256 "4f5a02ea53ddf4a4f4041ec5322a2713eb66548123a2665223d3bc34865f22df"
 
       def install
         bin.install "carapace-bridge"
@@ -38,7 +38,7 @@ class CarapaceBridge < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/rsteube/carapace-bridge/releases/download/v0.0.18/carapace-bridge_linux_amd64.tar.gz"
-      sha256 "6fe9ea406ca8dab0c299bd408c354a6825fbd1fbc087064242be7249bbc21657"
+      sha256 "f2e490ca75f355d5f62d12f24a9beaf64ae39ff5f74d4e83a4cbc7ed1a44f9c5"
 
       def install
         bin.install "carapace-bridge"
