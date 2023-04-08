@@ -5,21 +5,21 @@
 class CarapaceBridge < Formula
   desc "completion bridge"
   homepage "https://github.com/rsteube/carapace-bridge"
-  version "0.0.19"
+  version "0.0.20"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rsteube/carapace-bridge/releases/download/v0.0.19/carapace-bridge_darwin_amd64.tar.gz"
-      sha256 "0900eda374ddc78989c406e7b0233051a79be25b62532d9bbdf7ee24e73f44d5"
+      url "https://github.com/rsteube/carapace-bridge/releases/download/v0.0.20/carapace-bridge_darwin_amd64.tar.gz"
+      sha256 "67a9218034b216baf7fc9fd0f21cfb294b62f3d7ff548c90a19d9d4d818dd508"
 
       def install
         bin.install "carapace-bridge"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rsteube/carapace-bridge/releases/download/v0.0.19/carapace-bridge_darwin_arm64.tar.gz"
-      sha256 "b87a41b3c6c209b1147b02e7cd953e844a7c15f72a8dbb4ae7ab65fad4e0a89e"
+      url "https://github.com/rsteube/carapace-bridge/releases/download/v0.0.20/carapace-bridge_darwin_arm64.tar.gz"
+      sha256 "87796e0b3081b73b8af714f2997f9d1a5dbdfcf67a8037e9cfd39d2ebfd2d1d5"
 
       def install
         bin.install "carapace-bridge"
@@ -29,16 +29,16 @@ class CarapaceBridge < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/rsteube/carapace-bridge/releases/download/v0.0.19/carapace-bridge_linux_amd64.tar.gz"
-      sha256 "27c52de0e518d0e3651a6bb5346deb116c3c704cb58dcd79cb69f8cc7b4668a7"
+      url "https://github.com/rsteube/carapace-bridge/releases/download/v0.0.20/carapace-bridge_linux_amd64.tar.gz"
+      sha256 "4a377193152eb6299d963ea1405a24961aa44ab371db2c6dd3e307d7b48fce69"
 
       def install
         bin.install "carapace-bridge"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rsteube/carapace-bridge/releases/download/v0.0.19/carapace-bridge_linux_arm64.tar.gz"
-      sha256 "202c74133959cf8272f7de06bc8981022fb4ec2126d77485a0f65c5cad24a78d"
+      url "https://github.com/rsteube/carapace-bridge/releases/download/v0.0.20/carapace-bridge_linux_arm64.tar.gz"
+      sha256 "0f2e44f8ed9baa3b6bca8c9aa8792062231b3e375e55c71554070b78f7b53d93"
 
       def install
         bin.install "carapace-bridge"
