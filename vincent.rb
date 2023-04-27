@@ -5,21 +5,21 @@
 class Vincent < Formula
   desc "terminal color theme chooser"
   homepage "https://github.com/rsteube/vincent"
-  version "0.0.6"
+  version "0.0.7"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/rsteube/vincent/releases/download/v0.0.6/vincent_darwin_arm64.tar.gz"
-      sha256 "f370e2bf2586742aa829418bbd23e58d3465c7a76898a3c7d521e1c921e98e87"
+    if Hardware::CPU.intel?
+      url "https://github.com/rsteube/vincent/releases/download/v0.0.7/vincent_darwin_amd64.tar.gz"
+      sha256 "68cec33fd7a8d525d3f519e2b296011d62903466262c8ce17da3021f4eee81fd"
 
       def install
         bin.install "vincent"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rsteube/vincent/releases/download/v0.0.6/vincent_darwin_amd64.tar.gz"
-      sha256 "a878a749757df1623943a7080ec041ff2a26f1e332555677ee9be9d756e9d197"
+    if Hardware::CPU.arm?
+      url "https://github.com/rsteube/vincent/releases/download/v0.0.7/vincent_darwin_arm64.tar.gz"
+      sha256 "a139451a719682ddb616885155f403fc90cde4685ea29fc51353c899574b31f3"
 
       def install
         bin.install "vincent"
@@ -28,17 +28,17 @@ class Vincent < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/rsteube/vincent/releases/download/v0.0.6/vincent_linux_amd64.tar.gz"
-      sha256 "fd9ee4636e82ae880fe562c6c735350da86f13a1ac08a2ec212198078ac6111f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rsteube/vincent/releases/download/v0.0.7/vincent_linux_arm64.tar.gz"
+      sha256 "df11f9b21ec35ca0d453a2166163ee113e96c7e752a2adb6e016b64fef630225"
 
       def install
         bin.install "vincent"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rsteube/vincent/releases/download/v0.0.6/vincent_linux_arm64.tar.gz"
-      sha256 "218e605301ac0df1c3321bb73c5e1ccd718dae1cb4513d2d889ca392515f1fba"
+    if Hardware::CPU.intel?
+      url "https://github.com/rsteube/vincent/releases/download/v0.0.7/vincent_linux_amd64.tar.gz"
+      sha256 "d47b3fb1345705b88ba76a069b6d3ccef757593c8445d8429df4c030339c26bc"
 
       def install
         bin.install "vincent"
