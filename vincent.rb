@@ -5,21 +5,21 @@
 class Vincent < Formula
   desc "terminal color theme chooser"
   homepage "https://github.com/rsteube/vincent"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rsteube/vincent/releases/download/v0.1.0/vincent_darwin_amd64.tar.gz"
-      sha256 "75576557c0f3e8e1532e42652022ae2f00f809d186e85cff2490409526fc8764"
+      url "https://github.com/rsteube/vincent/releases/download/v0.1.1/vincent_darwin_amd64.tar.gz"
+      sha256 "f42c8bf6f73b167b150eb50e761a3c83dfc27204b9eac1110c1d1248d20ab863"
 
       def install
         bin.install "vincent"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rsteube/vincent/releases/download/v0.1.0/vincent_darwin_arm64.tar.gz"
-      sha256 "52fc4f830d0214818df2ab54e9d052b25f85197f1cdd1fc6d76fefdec183dad1"
+      url "https://github.com/rsteube/vincent/releases/download/v0.1.1/vincent_darwin_arm64.tar.gz"
+      sha256 "e23c83f1eb990bbc901d156158d5ebe14a2b398ccf3ceacfac794546b8599a3f"
 
       def install
         bin.install "vincent"
@@ -29,16 +29,16 @@ class Vincent < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rsteube/vincent/releases/download/v0.1.0/vincent_linux_arm64.tar.gz"
-      sha256 "2f315f6def5532de89930d7ba4aee2d356cc954ce2fc2bdb0fa255d8391589ca"
+      url "https://github.com/rsteube/vincent/releases/download/v0.1.1/vincent_linux_arm64.tar.gz"
+      sha256 "ddd1e9dedbaefea9bad6417dee6ddc15a91c016dcc28dc66b26a3f5b47f93492"
 
       def install
         bin.install "vincent"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rsteube/vincent/releases/download/v0.1.0/vincent_linux_amd64.tar.gz"
-      sha256 "7b66bbab645a48cd1eb4be65714ccff217d94dd454f9a69e2347f109797f80fd"
+      url "https://github.com/rsteube/vincent/releases/download/v0.1.1/vincent_linux_amd64.tar.gz"
+      sha256 "99f1b4f5cf2d68f04bcb61e5a5edfb52d463cb634826a9689beb033e81e766bd"
 
       def install
         bin.install "vincent"
