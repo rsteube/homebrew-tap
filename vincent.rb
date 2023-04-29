@@ -5,21 +5,21 @@
 class Vincent < Formula
   desc "terminal color scheme chooser"
   homepage "https://github.com/rsteube/vincent"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rsteube/vincent/releases/download/v0.1.2/vincent_darwin_amd64.tar.gz"
-      sha256 "020b572d444fe1b923f94dd11f6aaedd6c4d461d314dcec6770727c2356bf8c4"
+      url "https://github.com/rsteube/vincent/releases/download/v0.1.3/vincent_darwin_amd64.tar.gz"
+      sha256 "83c777c1d971712f42e3933bc22f984f9e3f38c63a83897ed720729e2b0dcd70"
 
       def install
         bin.install "vincent"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rsteube/vincent/releases/download/v0.1.2/vincent_darwin_arm64.tar.gz"
-      sha256 "5b817d6ca07976500c4817b2f804735c740979e8988d8d4aeaaafc9c7f823bab"
+      url "https://github.com/rsteube/vincent/releases/download/v0.1.3/vincent_darwin_arm64.tar.gz"
+      sha256 "32c21cf9fcdbb2740edd725a2088d9d67b328069ca4cdc4e576cb2adaec68efa"
 
       def install
         bin.install "vincent"
@@ -28,17 +28,17 @@ class Vincent < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/rsteube/vincent/releases/download/v0.1.2/vincent_linux_amd64.tar.gz"
-      sha256 "22e403587b957f1bd2ca00c53c9c0cc654bb5f2800df42c17e6b9dba455d4dd9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rsteube/vincent/releases/download/v0.1.3/vincent_linux_arm64.tar.gz"
+      sha256 "2a43510bd9e454e8018ae7690e2b7549e83348fe1cfddeb57287ab8c0f1cb1d8"
 
       def install
         bin.install "vincent"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rsteube/vincent/releases/download/v0.1.2/vincent_linux_arm64.tar.gz"
-      sha256 "f35cd44389b83aed4601118a3289a38b865da35e804464895b2ffb3d2037d84d"
+    if Hardware::CPU.intel?
+      url "https://github.com/rsteube/vincent/releases/download/v0.1.3/vincent_linux_amd64.tar.gz"
+      sha256 "5a592bc6c20a6648e88448cdc27ccc42068cbc8caaeecb45c5189ae5694f35ba"
 
       def install
         bin.install "vincent"
