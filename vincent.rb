@@ -5,21 +5,21 @@
 class Vincent < Formula
   desc "terminal color scheme chooser"
   homepage "https://github.com/rsteube/vincent"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rsteube/vincent/releases/download/v0.1.3/vincent_darwin_amd64.tar.gz"
-      sha256 "83c777c1d971712f42e3933bc22f984f9e3f38c63a83897ed720729e2b0dcd70"
+      url "https://github.com/rsteube/vincent/releases/download/v0.1.4/vincent_darwin_amd64.tar.gz"
+      sha256 "00acd66bf48d568444173828d89f372ee46931707b58778e4eb0763fc629b20b"
 
       def install
         bin.install "vincent"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rsteube/vincent/releases/download/v0.1.3/vincent_darwin_arm64.tar.gz"
-      sha256 "32c21cf9fcdbb2740edd725a2088d9d67b328069ca4cdc4e576cb2adaec68efa"
+      url "https://github.com/rsteube/vincent/releases/download/v0.1.4/vincent_darwin_arm64.tar.gz"
+      sha256 "ca8d02fc80fff5c12c4cbaa58aea79d95c7c77e84d3b915a0b5eed694865cde8"
 
       def install
         bin.install "vincent"
@@ -29,16 +29,16 @@ class Vincent < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rsteube/vincent/releases/download/v0.1.3/vincent_linux_arm64.tar.gz"
-      sha256 "2a43510bd9e454e8018ae7690e2b7549e83348fe1cfddeb57287ab8c0f1cb1d8"
+      url "https://github.com/rsteube/vincent/releases/download/v0.1.4/vincent_linux_arm64.tar.gz"
+      sha256 "9842bee9e28955fbac5b8d06e79c461b838a7f7df43fffd6df45d524724d0aec"
 
       def install
         bin.install "vincent"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rsteube/vincent/releases/download/v0.1.3/vincent_linux_amd64.tar.gz"
-      sha256 "5a592bc6c20a6648e88448cdc27ccc42068cbc8caaeecb45c5189ae5694f35ba"
+      url "https://github.com/rsteube/vincent/releases/download/v0.1.4/vincent_linux_amd64.tar.gz"
+      sha256 "68d010874255d2939dfbc656cbed940e5a8773898cb98bfc34a4f7b7a5a5411f"
 
       def install
         bin.install "vincent"
