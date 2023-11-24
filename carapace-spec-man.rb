@@ -5,21 +5,21 @@
 class CarapaceSpecMan < Formula
   desc "generate spec from manpages"
   homepage "https://github.com/rsteube/carapace-spec-man"
-  version "0.0.3"
+  version "0.0.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rsteube/carapace-spec-man/releases/download/v0.0.3/carapace-spec-man_darwin_amd64.tar.gz"
-      sha256 "c7110a9cf211e61d0de5b36e9b71a12e096a8e502cbcdbddeef7835885fab489"
+      url "https://github.com/rsteube/carapace-spec-man/releases/download/v0.0.4/carapace-spec-man_darwin_amd64.tar.gz"
+      sha256 "d2047241c4129a9ddf3f93ef3d8667a08098ed5a0688dffb192d7929e30176a7"
 
       def install
         bin.install "carapace-spec-man"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rsteube/carapace-spec-man/releases/download/v0.0.3/carapace-spec-man_darwin_arm64.tar.gz"
-      sha256 "58a30c35e8b3010d97c1dc67a57c174cab1a8064c0ecb624b08e905bcf4de2cc"
+      url "https://github.com/rsteube/carapace-spec-man/releases/download/v0.0.4/carapace-spec-man_darwin_arm64.tar.gz"
+      sha256 "c2551cb35ce7b7473d65a396d4aae442fa71c3085030000b4c3bca1f3f560922"
 
       def install
         bin.install "carapace-spec-man"
@@ -29,16 +29,16 @@ class CarapaceSpecMan < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rsteube/carapace-spec-man/releases/download/v0.0.3/carapace-spec-man_linux_arm64.tar.gz"
-      sha256 "5f36408d3a9a7430a10d669cc70b29739b170629a1989d76b554df4b02865410"
+      url "https://github.com/rsteube/carapace-spec-man/releases/download/v0.0.4/carapace-spec-man_linux_arm64.tar.gz"
+      sha256 "87bf2acd6b9bc9dfe526571d18c46c67fb89bc13d6aa282cd56a5442e3906fee"
 
       def install
         bin.install "carapace-spec-man"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rsteube/carapace-spec-man/releases/download/v0.0.3/carapace-spec-man_linux_amd64.tar.gz"
-      sha256 "6b576c83b6b020197ff8a7054d310776aaec0bdd45087c6fdfe9a2f9ffdd75d3"
+      url "https://github.com/rsteube/carapace-spec-man/releases/download/v0.0.4/carapace-spec-man_linux_amd64.tar.gz"
+      sha256 "0584a64577f9e95f849fa58886427a8a5bd55a33fff23b4823e873a46b9e0c02"
 
       def install
         bin.install "carapace-spec-man"
