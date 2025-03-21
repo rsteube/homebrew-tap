@@ -5,21 +5,21 @@
 class Freckles < Formula
   desc "A simple dotfile manager."
   homepage "https://github.com/carapace-sh/freckles"
-  version "0.3.1"
+  version "0.3.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/carapace-sh/freckles/releases/download/v0.3.1/freckles_0.3.1_darwin_amd64.tar.gz"
-      sha256 "657acf2149189f28acf721a082686cb80abd83af34d3b6faf14e8415993fab1f"
+      url "https://github.com/carapace-sh/freckles/releases/download/v0.3.2/freckles_0.3.2_darwin_amd64.tar.gz"
+      sha256 "8501dc4cc975376e549c18138bae8ba65d47cdac2cc40cd7691d40920b05d65b"
 
       def install
         bin.install "freckles"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/carapace-sh/freckles/releases/download/v0.3.1/freckles_0.3.1_darwin_arm64.tar.gz"
-      sha256 "0d6e0aec3cc52b2ce421d2ffaa318bf5cbd16c9712f2f69fb588fbdc2f3825fe"
+      url "https://github.com/carapace-sh/freckles/releases/download/v0.3.2/freckles_0.3.2_darwin_arm64.tar.gz"
+      sha256 "5429cd241afeaea36a2ba3989b66d37a4b7b836890e05b5365b642dccf31a938"
 
       def install
         bin.install "freckles"
@@ -30,8 +30,8 @@ class Freckles < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/carapace-sh/freckles/releases/download/v0.3.1/freckles_0.3.1_linux_amd64.tar.gz"
-        sha256 "119c9e56ce047843befab5b14f0ac63a95e47b7caa76d7dbd528f8b0a5d09593"
+        url "https://github.com/carapace-sh/freckles/releases/download/v0.3.2/freckles_0.3.2_linux_amd64.tar.gz"
+        sha256 "6c03a10ddfae70c154d7d0adc3139e6eaaca901a10c28f9e8e5e937c9c85994e"
 
         def install
           bin.install "freckles"
@@ -40,8 +40,8 @@ class Freckles < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/carapace-sh/freckles/releases/download/v0.3.1/freckles_0.3.1_linux_arm64.tar.gz"
-        sha256 "bbbc22d65574736ece5ed1472cc0f9b7e3bb4f7c8e6b95d3a7e7b536c95d509c"
+        url "https://github.com/carapace-sh/freckles/releases/download/v0.3.2/freckles_0.3.2_linux_arm64.tar.gz"
+        sha256 "5c02c8ae0e671f675043195f8ca76760eeffddf5d1089cf74be8902e592d493e"
 
         def install
           bin.install "freckles"
