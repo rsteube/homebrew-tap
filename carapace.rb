@@ -5,21 +5,21 @@
 class Carapace < Formula
   desc "multi-shell multi-command argument completer"
   homepage "https://github.com/carapace-sh/carapace-bin"
-  version "1.4.1"
+  version "1.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/carapace-sh/carapace-bin/releases/download/v1.4.1/carapace-bin_1.4.1_darwin_amd64.tar.gz"
-      sha256 "d0c07a0f035851160789bd027f4d69781b89d2fb3b3a962b480e5db583deb8a8"
+      url "https://github.com/carapace-sh/carapace-bin/releases/download/v1.5.0/carapace-bin_1.5.0_darwin_amd64.tar.gz"
+      sha256 "c83bdeecee5a8d807af9c679a5a85e3c548de4ea4130c7b2414263865b48fb6d"
 
       def install
         bin.install "carapace"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/carapace-sh/carapace-bin/releases/download/v1.4.1/carapace-bin_1.4.1_darwin_arm64.tar.gz"
-      sha256 "4dfb87a8914b8ece99a57d1f2f424dcb173b5ddd8b2d41f5d36c397d24b17ef1"
+      url "https://github.com/carapace-sh/carapace-bin/releases/download/v1.5.0/carapace-bin_1.5.0_darwin_arm64.tar.gz"
+      sha256 "d16842cca75720c4f97e3d0238874d03cf48173783c8dc0d809ec7338f4f344a"
 
       def install
         bin.install "carapace"
@@ -28,16 +28,16 @@ class Carapace < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/carapace-sh/carapace-bin/releases/download/v1.4.1/carapace-bin_1.4.1_linux_amd64.tar.gz"
-      sha256 "fad6a1aa31d021de3cc4389a1010ac160eae9dd8328aba68c489387e333062d0"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/carapace-sh/carapace-bin/releases/download/v1.5.0/carapace-bin_1.5.0_linux_amd64.tar.gz"
+      sha256 "08765d2f79c4d3a88d56204ef417c529eb118d2b056ff65948c8202db6a956eb"
       def install
         bin.install "carapace"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/carapace-sh/carapace-bin/releases/download/v1.4.1/carapace-bin_1.4.1_linux_arm64.tar.gz"
-      sha256 "e2c7dadb5be8de14a19777c0d1c4dbcb1fa219217a6137a6e449f8005a7427a9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/carapace-sh/carapace-bin/releases/download/v1.5.0/carapace-bin_1.5.0_linux_arm64.tar.gz"
+      sha256 "392ea4c6147d294029a2371eed8e005e5ca266d37a4b55e188905d9ccc4a4e51"
       def install
         bin.install "carapace"
       end
