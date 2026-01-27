@@ -5,21 +5,21 @@
 class CarapaceAws < Formula
   desc "An enriched aws completer"
   homepage "https://github.com/carapace-sh/carapace-aws"
-  version "0.0.33"
+  version "0.0.34"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/carapace-sh/carapace-aws/releases/download/v0.0.33/carapace-aws_0.0.33_darwin_amd64.tar.gz"
-      sha256 "62acf8aea9539dc16fd65b2de41596edcd693bb01f1ba69af95a19cee4e24e3b"
+      url "https://github.com/carapace-sh/carapace-aws/releases/download/v0.0.34/carapace-aws_0.0.34_darwin_amd64.tar.gz"
+      sha256 "0f0c0e3314a06c0884d1d0d9f46f78a47ec8db2a49252537f283eb0c5dc935d9"
 
       def install
         bin.install "carapace-aws"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/carapace-sh/carapace-aws/releases/download/v0.0.33/carapace-aws_0.0.33_darwin_arm64.tar.gz"
-      sha256 "e6e1b808ab80094d76e44c9d4b102cdb093a5290fa501fe050c0762317c1b643"
+      url "https://github.com/carapace-sh/carapace-aws/releases/download/v0.0.34/carapace-aws_0.0.34_darwin_arm64.tar.gz"
+      sha256 "76bb33a709ce5a623bb8fcc31a4da84317f313eac5febfb491fe9ee67a40e09a"
 
       def install
         bin.install "carapace-aws"
@@ -29,15 +29,15 @@ class CarapaceAws < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carapace-sh/carapace-aws/releases/download/v0.0.33/carapace-aws_0.0.33_linux_amd64.tar.gz"
-      sha256 "33e579968b59900099b966838eda122fd5c5c43b9a8ccf24c5ba62c7a01382f3"
+      url "https://github.com/carapace-sh/carapace-aws/releases/download/v0.0.34/carapace-aws_0.0.34_linux_amd64.tar.gz"
+      sha256 "e1dd31d754f76dc3c79ce4b89e3d0e025588e2d7e7dbd6f0db92c8dd91f3a5d9"
       def install
         bin.install "carapace-aws"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carapace-sh/carapace-aws/releases/download/v0.0.33/carapace-aws_0.0.33_linux_arm64.tar.gz"
-      sha256 "3d2f6517c5ed9be8eb7d88b3bb64ddaafb0742bb59285ad7ce50d57b80f20ea3"
+      url "https://github.com/carapace-sh/carapace-aws/releases/download/v0.0.34/carapace-aws_0.0.34_linux_arm64.tar.gz"
+      sha256 "16f90818aa8ae64c967005bbd8a72359d24ba37ff09c96e4bfe379506aa0a298"
       def install
         bin.install "carapace-aws"
       end
