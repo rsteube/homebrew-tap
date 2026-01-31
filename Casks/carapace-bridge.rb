@@ -3,7 +3,7 @@ cask "carapace-bridge" do
   name "carapace-bridge"
   desc "A multi-shell completion bridge"
   homepage "https://github.com/carapace-sh/carapace-bridge"
-  version "1.5.1"
+  version "1.5.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "carapace-bridge" do
   on_macos do
     on_intel do
       url "https://github.com/carapace-sh/carapace-bridge/releases/download/v#{version}/carapace-bridge_#{version}_darwin_amd64.tar.gz"
-      sha256 "c9437df0ffb831a77976b7b8cb3e02d04b28d7dfcdb7ee0ba4b156dcbd4fc898"
+      sha256 "bee70ac6779f925e7a0ecb8fb6e940d54691fb65662090ea8a04ddbcaf17a9d4"
     end
     on_arm do
       url "https://github.com/carapace-sh/carapace-bridge/releases/download/v#{version}/carapace-bridge_#{version}_darwin_arm64.tar.gz"
-      sha256 "3c2ed029d086a084116d0a998449197156d27ed2217d748b4a3dcb0d6ca45d07"
+      sha256 "854aa04fe6b41e39a2afd5d6cc0d31f5a090533d87a6865880d10529f135d672"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/carapace-sh/carapace-bridge/releases/download/v#{version}/carapace-bridge_#{version}_linux_amd64.tar.gz"
-      sha256 "423e82eed275dc9739b59c8db1a48043bcd8a666deb7c72af6663a53ff849370"
+      sha256 "108a77367196ec158f889bf19beab476939562704fcad0af418f7bd597ef1c41"
     end
     on_arm do
       url "https://github.com/carapace-sh/carapace-bridge/releases/download/v#{version}/carapace-bridge_#{version}_linux_arm64.tar.gz"
-      sha256 "e9ee17c0b2d8c69ca6ed625a0cf2e24eaea5940d56c6ac2f6974b78622896d5d"
+      sha256 "c6f6281e53251fcc97cd71a0d38713b3ccaa0e4b8cd41f7c83c1a8dac63c28af"
     end
   end
 
