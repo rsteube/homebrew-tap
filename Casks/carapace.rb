@@ -3,7 +3,7 @@ cask "carapace" do
   name "carapace"
   desc "A multi-shell completion binary"
   homepage "https://github.com/carapace-sh/carapace-bin"
-  version "1.6.2"
+  version "1.6.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "carapace" do
   on_macos do
     on_intel do
       url "https://github.com/carapace-sh/carapace-bin/releases/download/v#{version}/carapace-bin_#{version}_darwin_amd64.tar.gz"
-      sha256 "ac135473e8ba9d092c0b416d02fa13f5d0f623b6b140bcd37cf69fddfc2b58b0"
+      sha256 "777e7dd865774850cd0d66bb5be6c33253fdb5d423f05f125c5959526caf48f6"
     end
     on_arm do
       url "https://github.com/carapace-sh/carapace-bin/releases/download/v#{version}/carapace-bin_#{version}_darwin_arm64.tar.gz"
-      sha256 "28918fa21fab4055c270eb2035f778f83efadbde4411c36424062afe7115936d"
+      sha256 "99ad588ae83fb976421578c35e2efd55db4c9e375f9d8a115e8c296c9e69367a"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/carapace-sh/carapace-bin/releases/download/v#{version}/carapace-bin_#{version}_linux_amd64.tar.gz"
-      sha256 "fdec431d3837210da8d190bb922c57bd16f4be75920dd11d23cc0cea6e7c4968"
+      sha256 "dc5b20eb980902c9bc184e90ce7dbb004edcd59437de52cf32234ee09bcb8abd"
     end
     on_arm do
       url "https://github.com/carapace-sh/carapace-bin/releases/download/v#{version}/carapace-bin_#{version}_linux_arm64.tar.gz"
-      sha256 "5eb10605b3fbfb4236a9f59d95b45bcedc54511910ad94b566a6eb36a80048cf"
+      sha256 "0e4884e0c933a3bea8771c85d5289045274aa981c131f7b1688d368753a9651a"
     end
   end
 
