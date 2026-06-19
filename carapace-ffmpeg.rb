@@ -5,13 +5,13 @@
 class CarapaceFfmpeg < Formula
   desc "An FFmpeg argstream lexer and completer."
   homepage "https://github.com/carapace-sh/carapace-ffmpeg"
-  version "0.0.5"
+  version "0.0.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/carapace-sh/carapace-ffmpeg/releases/download/v0.0.5/carapace-ffmpeg_0.0.5_darwin_amd64.tar.gz"
-      sha256 "8fd0da5bfc79ecc2582525b87b043d1c4d3b4d7cbd602d6802e6e84723ce68cf"
+      url "https://github.com/carapace-sh/carapace-ffmpeg/releases/download/v0.0.6/carapace-ffmpeg_0.0.6_darwin_amd64.tar.gz"
+      sha256 "a81fc5a672b28ae2faa9354778b488ed1b68b8f470f2e7b1bc2f34a2697e1acc"
 
       define_method(:install) do
         bin.install "carapace-ffmpeg"
@@ -20,8 +20,8 @@ class CarapaceFfmpeg < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/carapace-sh/carapace-ffmpeg/releases/download/v0.0.5/carapace-ffmpeg_0.0.5_darwin_arm64.tar.gz"
-      sha256 "67c2f0e2151fc20f725fdf6ef557956c638d7a493421ebce599bc45780329869"
+      url "https://github.com/carapace-sh/carapace-ffmpeg/releases/download/v0.0.6/carapace-ffmpeg_0.0.6_darwin_arm64.tar.gz"
+      sha256 "8ea27cd9f04ce047c706dc327b74e9d9f26de95938bff8ab8c053a6423924f92"
 
       define_method(:install) do
         bin.install "carapace-ffmpeg"
@@ -33,8 +33,8 @@ class CarapaceFfmpeg < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carapace-sh/carapace-ffmpeg/releases/download/v0.0.5/carapace-ffmpeg_0.0.5_linux_amd64.tar.gz"
-      sha256 "26b0aaee205ea8b80c9e35a1146db3da3a35afc34f1c17e0e49dd26c19ee7ae1"
+      url "https://github.com/carapace-sh/carapace-ffmpeg/releases/download/v0.0.6/carapace-ffmpeg_0.0.6_linux_amd64.tar.gz"
+      sha256 "bef37cd804fef4680af103dcf13aa3b40e20f79ebef21f88e928da5bf5cf162c"
       define_method(:install) do
         bin.install "carapace-ffmpeg"
         bin.install "carapace-ffplay"
@@ -42,8 +42,8 @@ class CarapaceFfmpeg < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carapace-sh/carapace-ffmpeg/releases/download/v0.0.5/carapace-ffmpeg_0.0.5_linux_arm64.tar.gz"
-      sha256 "3f038f48c62ef21507201e9d8b1c4ca8c719c74c4f3ac957041f2bd714c0b4cf"
+      url "https://github.com/carapace-sh/carapace-ffmpeg/releases/download/v0.0.6/carapace-ffmpeg_0.0.6_linux_arm64.tar.gz"
+      sha256 "fdacae1875072812d9d1986cb8c4399ca2b159fee6a083a5d3f8ada038228e60"
       define_method(:install) do
         bin.install "carapace-ffmpeg"
         bin.install "carapace-ffplay"
