@@ -5,21 +5,21 @@
 class CarapaceMagick < Formula
   desc "An ImageMagick magick argstream lexer and completer."
   homepage "https://github.com/carapace-sh/carapace-magick"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/carapace-sh/carapace-magick/releases/download/v0.0.1/carapace-magick_0.0.1_darwin_amd64.tar.gz"
-      sha256 "1f11d40196ffb6543e185dc6e9eb5b264da91c82fefcef24e1f9136eb38a4e6c"
+      url "https://github.com/carapace-sh/carapace-magick/releases/download/v0.0.2/carapace-magick_0.0.2_darwin_amd64.tar.gz"
+      sha256 "9010c412dd1aa6d0926e2e70c2b71b530fbd46cfb822fa3028608cbd9daac3a0"
 
       define_method(:install) do
         bin.install "carapace-magick"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/carapace-sh/carapace-magick/releases/download/v0.0.1/carapace-magick_0.0.1_darwin_arm64.tar.gz"
-      sha256 "c33ab499fd01299c37942b9ff78e5a9dabda49eb9955c09d02b226afa18a0c7b"
+      url "https://github.com/carapace-sh/carapace-magick/releases/download/v0.0.2/carapace-magick_0.0.2_darwin_arm64.tar.gz"
+      sha256 "38b022e5c8936e167fc7cf8cbfe0be73b77acfd3b0064c14c474da25372f106a"
 
       define_method(:install) do
         bin.install "carapace-magick"
@@ -29,15 +29,15 @@ class CarapaceMagick < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carapace-sh/carapace-magick/releases/download/v0.0.1/carapace-magick_0.0.1_linux_amd64.tar.gz"
-      sha256 "5bb943b8797b4e19569a2ea3ab514d4826de1996db236d6891e1c55a8c71e199"
+      url "https://github.com/carapace-sh/carapace-magick/releases/download/v0.0.2/carapace-magick_0.0.2_linux_amd64.tar.gz"
+      sha256 "e057a1d8d2adedbeb6255ce610c450e667e824f908404b7c3e4afe7d33c87f66"
       define_method(:install) do
         bin.install "carapace-magick"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carapace-sh/carapace-magick/releases/download/v0.0.1/carapace-magick_0.0.1_linux_arm64.tar.gz"
-      sha256 "30f4d8a5e3f3a0153467673db103a5f9ea3f619be0e5e5c064c21278fbf06942"
+      url "https://github.com/carapace-sh/carapace-magick/releases/download/v0.0.2/carapace-magick_0.0.2_linux_arm64.tar.gz"
+      sha256 "b599970ef5804ecc820ec24fed4df02929f97d3313f77ef5edea1198ad3d1dac"
       define_method(:install) do
         bin.install "carapace-magick"
       end
